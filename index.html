@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aastha Bhardwaj</title>
+  <meta name="description" content="I help AI companies close the gap between what their technology can do and what their customers are actually willing to adopt.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #f8f7f3;
+      --text: #1c1c1c;
+      --text-muted: #666;
+      --navy: #0d1b2a;
+      --border: #e0ddd7;
+      --accent: #2c4a7c;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 2.5rem;
+    }
+
+    /* Nav */
+    nav {
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 10;
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-name {
+      font-family: 'Lora', Georgia, serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--navy);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.15s;
+    }
+
+    nav ul a:hover {
+      color: var(--text);
+    }
+
+    /* Section structure */
+    section {
+      padding: 5rem 0;
+    }
+
+    section + section {
+      border-top: 1px solid var(--border);
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Lora', Georgia, serif;
+      color: var(--navy);
+    }
+
+    /* Hero */
+    #hero {
+      padding: 7rem 0 6rem;
+    }
+
+    #hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 600;
+      line-height: 1.1;
+      margin-bottom: 1.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-one-liner {
+      font-size: 1.2rem;
+      line-height: 1.65;
+      color: var(--text);
+      max-width: 600px;
+      margin-bottom: 1.25rem;
+      font-weight: 400;
+    }
+
+    .hero-subtext {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 520px;
+      line-height: 1.75;
+    }
+
+    /* What I Do */
+    .venn-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .venn-card {
+      padding: 0 2rem 0 0;
+    }
+
+    .venn-card + .venn-card {
+      padding: 0 2rem 0 2rem;
+      border-left: 1px solid var(--border);
+    }
+
+    .venn-card:last-child {
+      padding-right: 0;
+    }
+
+    .venn-card h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      color: var(--navy);
+      margin-bottom: 1.25rem;
+      line-height: 1.4;
+    }
+
+    .venn-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .venn-card ul li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      padding: 0.15rem 0;
+      padding-left: 1.1rem;
+      position: relative;
+    }
+
+    .venn-card ul li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--border);
+    }
+
+    /* Projects */
+    .project {
+      padding: 2.75rem 0;
+    }
+
+    .project + .project {
+      border-top: 1px solid var(--border);
+    }
+
+    .project-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.6rem;
+    }
+
+    .project h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+    }
+
+    .project-tag {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      background: var(--border);
+      padding: 0.2rem 0.65rem;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+
+    .project-tagline {
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 1rem;
+      font-style: italic;
+      font-family: 'Lora', Georgia, serif;
+      line-height: 1.6;
+    }
+
+    .project-story {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.85;
+      margin-bottom: 1.25rem;
+      max-width: 680px;
+    }
+
+    .project-insight {
+      font-size: 0.9rem;
+      color: var(--navy);
+      border-left: 2px solid var(--navy);
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .project-meta {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .project-meta a {
+      font-size: 0.825rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    .project-meta a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    .project-stack {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-left: auto;
+    }
+
+    /* How I Think */
+    #thinking p {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--text);
+      max-width: 680px;
+    }
+
+    #thinking p + p {
+      margin-top: 1.75rem;
+    }
+
+    /* Background */
+    .bg-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .bg-item {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 2rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    .bg-item:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .bg-org {
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.5;
+    }
+
+    .bg-role {
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--border);
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.825rem;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    .footer-copy {
+      font-size: 0.775rem;
+      color: var(--text-muted);
+      font-family: 'Lora', Georgia, serif;
+      font-style: italic;
+    }
+
+    /* Responsive */
+    @media (max-width: 680px) {
+      .container {
+        padding: 0 1.5rem;
+      }
+
+      nav ul {
+        gap: 1.25rem;
+      }
+
+      #hero {
+        padding: 4.5rem 0 4rem;
+      }
+
+      .hero-one-liner {
+        font-size: 1.1rem;
+      }
+
+      .venn-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .venn-card,
+      .venn-card + .venn-card {
+        padding: 1.75rem 0;
+        border-left: none;
+        border-top: 1px solid var(--border);
+      }
+
+      .venn-card:first-child {
+        border-top: none;
+        padding-top: 0;
+      }
+
+      .bg-item {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+      }
+
+      .project-stack {
+        margin-left: 0;
+      }
+
+      footer .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a class="nav-name" href="#hero">Aastha Bhardwaj</a>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#thinking">Writing</a></li>
+        <li><a href="#background">Background</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero -->
+    <section id="hero">
+      <div class="container">
+        <h1>Aastha Bhardwaj</h1>
+        <p class="hero-one-liner">I help AI companies close the gap between what their technology can do and what their customers are actually willing to adopt.</p>
+        <p class="hero-subtext">HBS MBA. Six years deploying medical diagnostics across 30+ countries. Now building and deploying AI in healthcare.</p>
+      </div>
+    </section>
+
+    <!-- What I Do -->
+    <section id="work">
+      <div class="container">
+        <p class="section-label">What I Do</p>
+        <div class="venn-grid">
+          <div class="venn-card">
+            <h3>What I'm good at</h3>
+            <ul>
+              <li>Building trust fast</li>
+              <li>Navigating ambiguity</li>
+              <li>Translating complexity across technical and non-technical stakeholders</li>
+              <li>Earning operator buy-in in skeptical environments</li>
+            </ul>
+          </div>
+          <div class="venn-card">
+            <h3>What I get paid to do</h3>
+            <ul>
+              <li>AI deployment strategy</li>
+              <li>Go-to-market</li>
+              <li>Enterprise customer success</li>
+              <li>Commercial leadership</li>
+              <li>Change management at the human layer</li>
+            </ul>
+          </div>
+          <div class="venn-card">
+            <h3>What brings me joy</h3>
+            <ul>
+              <li>Conversations</li>
+              <li>Understanding how people think</li>
+              <li>Problem-solving</li>
+              <li>Finding patterns</li>
+              <li>The art of language and meaning</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+        <p class="section-label">Projects</p>
+
+        <div class="project">
+          <div class="project-header">
+            <h3>Panorama</h3>
+            <span class="project-tag">Clinical AI &middot; Healthcare</span>
+          </div>
+          <p class="project-tagline">A two-layer clinical oversight platform built for physician supervisors managing home-based NP workflows.</p>
+          <p class="project-story">
+            Built for Sprinter Health's take-home assessment. The real problem wasn't missing data — it was physician cognitive overload. I designed a workflow where Dr. Chen clears 30+ charts in 15 minutes. Two-layer risk detection: SQL for known contraindications (deterministic, must fire 100%), Claude Haiku for free-text NP note analysis (catches what structured fields miss). Ran a live clinical usability session with a physician. All four priorities 3–6 came from that session.
+          </p>
+          <p class="project-insight">Key decision: SQL for rules, AI for language. The roles do not overlap.</p>
+          <div class="project-meta">
+            <a href="https://panoramavision.lovable.app" target="_blank" rel="noopener">Live site</a>
+            <a href="https://github.com/abhardwaj58/panoramavision" target="_blank" rel="noopener">GitHub</a>
+            <span class="project-stack">Lovable &middot; Supabase &middot; Claude Haiku &middot; TypeScript</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-header">
+            <h3>Thyra</h3>
+            <span class="project-tag">Healthcare AI &middot; Demo</span>
+          </div>
+          <p class="project-tagline">A health information tool built to make medical knowledge accessible and conversational.</p>
+          <div class="project-meta">
+            <a href="https://github.com/abhardwaj58/thyra-health" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-header">
+            <h3>Wealth Agent</h3>
+            <span class="project-tag">Agentic AI &middot; Personal Project</span>
+          </div>
+          <p class="project-tagline">A portfolio management agent built for my dad, who does not trust what he cannot understand.</p>
+          <p class="project-story">
+            My dad manages his own investments. He reads balance sheets, tracks positions, runs his own research. He just does it slowly. I built this as an agent that does the research layer for him — reads financial data, surfaces signals, explains reasoning in plain language. What started as a father-daughter project became an experiment in model architecture: I tested different model choices, tuned for token consumption, and learned firsthand how much agentic cost depends on how you structure the prompts and chain the tools.
+          </p>
+          <p class="project-insight">The real insight: Adoption does not happen because something is smart. It happens because someone trusts it.</p>
+          <div class="project-meta">
+            <a href="https://makemymoney.streamlit.app" target="_blank" rel="noopener">Live site</a>
+            <a href="https://github.com/abhardwaj58/wealth-agent" target="_blank" rel="noopener">GitHub</a>
+            <span class="project-stack">Python &middot; Streamlit</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- How I Think -->
+    <section id="thinking">
+      <div class="container">
+        <p class="section-label">How I Think</p>
+        <p>AI deployment fails at the human layer, not the technical one. The model is rarely the problem. The operator who does not trust it, the clinician who ignores its flags, the sales team that cannot explain it — those are the failure points. I have spent a decade working in exactly that gap.</p>
+        <p>At Abbott, I deployed point-of-care diagnostics across 200+ hospital clients in 30+ countries. The instrument always worked. What determined success was whether the nurse trusted it, whether the lab director felt heard, whether the hospital administrator saw the ROI. Same problem, different stack. At HiLabs, I stabilized a Fortune 30 client that was RED. The AI was fine. The relationship had broken.</p>
+        <p>I am also a writer, a former college editor, and someone who finds genuine joy in the hidden architecture of language. I built an anonymous submissions section at my university magazine so students who were afraid to speak under their names could still be heard. That instinct — creating space for trust to form — shows up everywhere I work.</p>
+      </div>
+    </section>
+
+    <!-- Background -->
+    <section id="background">
+      <div class="container">
+        <p class="section-label">Background</p>
+        <ul class="bg-list">
+          <li class="bg-item">
+            <span class="bg-org">Harvard Business School</span>
+            <span class="bg-role">MBA, Class of 2025 &middot; Distinction, top 10%</span>
+          </li>
+          <li class="bg-item">
+            <span class="bg-org">BITS Pilani</span>
+            <span class="bg-role">B.E. Electronics and Communications &middot; Distinction, top 5% &middot; Senior Editor, Perspective Magazine &middot; President, AOEE</span>
+          </li>
+          <li class="bg-item">
+            <span class="bg-org">Abbott Laboratories</span>
+            <span class="bg-role">6 years &middot; Product Strategy and Implementation &middot; Middle East, Africa, Turkey</span>
+          </li>
+          <li class="bg-item">
+            <span class="bg-org">L.E.K. Consulting</span>
+            <span class="bg-role">Summer Associate</span>
+          </li>
+          <li class="bg-item">
+            <span class="bg-org">HiLabs</span>
+            <span class="bg-role">Senior PM, Growth</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://linkedin.com/in/aastha-bhardwaj-" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/abhardwaj58" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:your@email.com">Email</a>
+      </div>
+      <span class="footer-copy">Aastha Bhardwaj</span>
+    </div>
+  </footer>
+
+</body>
+</html>
