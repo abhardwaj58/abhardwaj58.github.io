@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aastha Bhardwaj</title>
-  <meta name="description" content="I help AI companies close the gap between what their technology can do and what their customers are actually willing to adopt.">
+  <meta name="description" content="Engineer. Builder. Someone who gives a damn.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -136,57 +136,33 @@
     .hero-subtext {
       font-size: 0.95rem;
       color: var(--text-muted);
-      max-width: 520px;
-      line-height: 1.75;
+      max-width: 580px;
+      line-height: 1.8;
     }
 
-    /* What I Do */
-    .venn-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .venn-card {
-      padding: 0 2rem 0 0;
-    }
-
-    .venn-card + .venn-card {
-      padding: 0 2rem 0 2rem;
-      border-left: 1px solid var(--border);
-    }
-
-    .venn-card:last-child {
-      padding-right: 0;
-    }
-
-    .venn-card h3 {
-      font-size: 0.9rem;
-      font-weight: 600;
-      font-family: 'Inter', sans-serif;
-      color: var(--navy);
-      margin-bottom: 1.25rem;
-      line-height: 1.4;
-    }
-
-    .venn-card ul {
+    /* What Drives Me */
+    .drives-list {
       list-style: none;
       padding: 0;
+      max-width: 680px;
     }
 
-    .venn-card ul li {
-      font-size: 0.9rem;
+    .drives-item {
+      padding: 1.75rem 0;
+      border-top: 1px solid var(--border);
+      font-size: 1rem;
+      line-height: 1.8;
       color: var(--text-muted);
-      line-height: 1.75;
-      padding: 0.15rem 0;
-      padding-left: 1.1rem;
-      position: relative;
     }
 
-    .venn-card ul li::before {
-      content: "—";
-      position: absolute;
-      left: 0;
-      color: var(--border);
+    .drives-item:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .drives-item strong {
+      color: var(--navy);
+      font-weight: 500;
+      font-style: normal;
     }
 
     /* Projects */
@@ -374,23 +350,6 @@
         font-size: 1.1rem;
       }
 
-      .venn-grid {
-        grid-template-columns: 1fr;
-        gap: 0;
-      }
-
-      .venn-card,
-      .venn-card + .venn-card {
-        padding: 1.75rem 0;
-        border-left: none;
-        border-top: 1px solid var(--border);
-      }
-
-      .venn-card:first-child {
-        border-top: none;
-        padding-top: 0;
-      }
-
       .bg-item {
         grid-template-columns: 1fr;
         gap: 0.3rem;
@@ -427,46 +386,20 @@
     <section id="hero">
       <div class="container">
         <h1>Aastha Bhardwaj</h1>
-        <p class="hero-one-liner">I help AI companies close the gap between what their technology can do and what their customers are actually willing to adopt.</p>
-        <p class="hero-subtext">HBS MBA. Six years deploying medical diagnostics across 30+ countries. Now building and deploying AI in healthcare.</p>
+        <p class="hero-one-liner">Engineer. Builder. Someone who gives a damn.</p>
+        <p class="hero-subtext">I deploy complex technology into environments that resist it. A decade across 30+ countries taught me the instrument rarely fails. The human system around it does. Three applications shipped. A diagnostic lab in the Himalayas in the plans. An animal shelter after that.</p>
       </div>
     </section>
 
-    <!-- What I Do -->
+    <!-- What Drives Me -->
     <section id="work">
       <div class="container">
-        <p class="section-label">What I Do</p>
-        <div class="venn-grid">
-          <div class="venn-card">
-            <h3>What I'm good at</h3>
-            <ul>
-              <li>Building trust fast</li>
-              <li>Navigating ambiguity</li>
-              <li>Translating complexity across technical and non-technical stakeholders</li>
-              <li>Earning operator buy-in in skeptical environments</li>
-            </ul>
-          </div>
-          <div class="venn-card">
-            <h3>What I get paid to do</h3>
-            <ul>
-              <li>AI deployment strategy</li>
-              <li>Go-to-market</li>
-              <li>Enterprise customer success</li>
-              <li>Commercial leadership</li>
-              <li>Change management at the human layer</li>
-            </ul>
-          </div>
-          <div class="venn-card">
-            <h3>What brings me joy</h3>
-            <ul>
-              <li>Conversations</li>
-              <li>Understanding how people think</li>
-              <li>Problem-solving</li>
-              <li>Finding patterns</li>
-              <li>The art of language and meaning</li>
-            </ul>
-          </div>
-        </div>
+        <p class="section-label">What Drives Me</p>
+        <ul class="drives-list">
+          <li class="drives-item"><strong>What lights me up:</strong> conversations, finding hidden patterns, language and meaning, understanding how people make decisions under pressure.</li>
+          <li class="drives-item"><strong>Where I create value:</strong> making complex systems trustworthy for the humans inside them, earning buy-in in skeptical environments, building things that actually get used.</li>
+          <li class="drives-item"><strong>What I want to keep building:</strong> accessible healthcare for people geography forgot, AI that works for the people who need it most, and eventually, an animal shelter.</li>
+        </ul>
       </div>
     </section>
 
@@ -477,12 +410,28 @@
 
         <div class="project">
           <div class="project-header">
+            <h3>Thyra</h3>
+            <span class="project-tag">Healthcare AI &middot; Personal Project</span>
+          </div>
+          <p class="project-tagline">A triage routing tool built to explore whether AI could automate the first decision in healthcare.</p>
+          <p class="project-story">
+            Not diagnosis. The decision before that. Do you need a doctor on a screen, a telehealth consult, or an ambulance? In India, that decision is often made by whoever picks up the phone, with no clinical logic behind it. RMP networks are the de facto first contact for hundreds of millions of people. Thyra was an attempt to give that first contact a smarter decision layer. My mom is a biochemist. My sister contributed clinical escalation logic. This was my first application. Built with Lovable, Supabase, and Claude.
+          </p>
+          <p class="project-insight">Key decision: The routing logic came from family, not documentation. That is how it should work.</p>
+          <div class="project-meta">
+            <a href="https://github.com/abhardwaj58/thyra-health" target="_blank" rel="noopener">GitHub</a>
+            <span class="project-stack">Lovable &middot; Supabase &middot; Claude</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-header">
             <h3>Panorama</h3>
             <span class="project-tag">Clinical AI &middot; Healthcare</span>
           </div>
           <p class="project-tagline">A two-layer clinical oversight platform built for physician supervisors managing home-based NP workflows.</p>
           <p class="project-story">
-            Built for Sprinter Health's take-home assessment. The real problem wasn't missing data — it was physician cognitive overload. I designed a workflow where Dr. Chen clears 30+ charts in 15 minutes. Two-layer risk detection: SQL for known contraindications (deterministic, must fire 100%), Claude Haiku for free-text NP note analysis (catches what structured fields miss). Ran a live clinical usability session with a physician. All four priorities 3–6 came from that session.
+            The real problem was not missing data. It was cognitive overload. Dr. Chen supervises 30+ charts a month with 15 minutes to do it. She is legally liable for every missed contraindication. I designed a workflow where she clears her queue in the time she actually has. Two-layer risk detection: SQL for known contraindications, deterministic, must fire 100% of the time. Claude Haiku for free-text NP note analysis, catching what structured fields miss. Ran a live clinical usability session with a physician with 20+ years of experience. All four roadmap priorities 3 through 6 came from that single session.
           </p>
           <p class="project-insight">Key decision: SQL for rules, AI for language. The roles do not overlap.</p>
           <div class="project-meta">
@@ -494,25 +443,14 @@
 
         <div class="project">
           <div class="project-header">
-            <h3>Thyra</h3>
-            <span class="project-tag">Healthcare AI &middot; Demo</span>
-          </div>
-          <p class="project-tagline">A health information tool built to make medical knowledge accessible and conversational.</p>
-          <div class="project-meta">
-            <a href="https://github.com/abhardwaj58/thyra-health" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-
-        <div class="project">
-          <div class="project-header">
             <h3>Wealth Agent</h3>
             <span class="project-tag">Agentic AI &middot; Personal Project</span>
           </div>
           <p class="project-tagline">A portfolio management agent built for my dad, who does not trust what he cannot understand.</p>
           <p class="project-story">
-            My dad manages his own investments. He reads balance sheets, tracks positions, runs his own research. He just does it slowly. I built this as an agent that does the research layer for him — reads financial data, surfaces signals, explains reasoning in plain language. What started as a father-daughter project became an experiment in model architecture: I tested different model choices, tuned for token consumption, and learned firsthand how much agentic cost depends on how you structure the prompts and chain the tools.
+            My dad manages his own investments. He reads balance sheets, tracks positions, runs his own research. He just does it slowly. I built an agent that does the research layer for him: reads financial data, surfaces signals, explains reasoning in plain language. What started as a father-daughter project became a real experiment in agentic architecture. I tested different model choices, tuned for token consumption, and learned firsthand how much cost depends on how you structure prompts and chain tools. The real insight was not technical. Adoption does not happen because something is smart. It happens because someone trusts it.
           </p>
-          <p class="project-insight">The real insight: Adoption does not happen because something is smart. It happens because someone trusts it.</p>
+          <p class="project-insight">Key decision: Explanation is not optional. If my dad cannot follow the reasoning, the agent has failed.</p>
           <div class="project-meta">
             <a href="https://makemymoney.streamlit.app" target="_blank" rel="noopener">Live site</a>
             <a href="https://github.com/abhardwaj58/wealth-agent" target="_blank" rel="noopener">GitHub</a>
@@ -527,9 +465,9 @@
     <section id="thinking">
       <div class="container">
         <p class="section-label">How I Think</p>
-        <p>AI deployment fails at the human layer, not the technical one. The model is rarely the problem. The operator who does not trust it, the clinician who ignores its flags, the sales team that cannot explain it — those are the failure points. I have spent a decade working in exactly that gap.</p>
-        <p>At Abbott, I deployed point-of-care diagnostics across 200+ hospital clients in 30+ countries. The instrument always worked. What determined success was whether the nurse trusted it, whether the lab director felt heard, whether the hospital administrator saw the ROI. Same problem, different stack. At HiLabs, I stabilized a Fortune 30 client that was RED. The AI was fine. The relationship had broken.</p>
-        <p>I am also a writer, a former college editor, and someone who finds genuine joy in the hidden architecture of language. I built an anonymous submissions section at my university magazine so students who were afraid to speak under their names could still be heard. That instinct — creating space for trust to form — shows up everywhere I work.</p>
+        <p>I grew up in Himachal Pradesh, where two million people in the foothills of the Himalayas lack access to basic diagnostic testing. My mother is a biochemist. The idea of building the first accredited diagnostic lab in that region has been in my plans since before my MBA. That is not a professional ambition. It is a moral position: that access to healthcare information should not be determined by geography or wealth.</p>
+        <p>At Abbott I spent six years learning that the instrument always works. What fails is the human system around it. The nurse who does not trust the result. The lab director who was not consulted. The administrator who cannot see the ROI. I have spent my career in that gap. At HiLabs I stabilized a Fortune 30 client account that was in active escalation. The AI was fine. The relationship had broken. Same problem, different stack.</p>
+        <p>During the COVID crisis in India, a friend's father was dying and there were no hospital beds available. I was volunteering with Inaara, matching patients with plasma donors. We expanded to track beds, oxygen, and resources in real time. The platform connected over 900 patients with critical resources. My friend's father still passed away. I kept going. That instinct, building a parallel system when the existing one fails, shows up in everything I do. I am also a writer, a former college editor, and someone who finds genuine joy in the hidden architecture of language. At BITS I built an anonymous submissions section in the student magazine so students who were afraid to speak under their names could still be heard. Creating space for trust to form is not a professional skill. It is just how I operate.</p>
       </div>
     </section>
 
@@ -544,19 +482,27 @@
           </li>
           <li class="bg-item">
             <span class="bg-org">BITS Pilani</span>
-            <span class="bg-role">B.E. Electronics and Communications &middot; Distinction, top 5% &middot; Senior Editor, Perspective Magazine &middot; President, AOEE</span>
+            <span class="bg-role">B.E. Electronics and Communications &middot; Distinction, top 5% &middot; Senior Editor and builder of the anonymous submissions section at Perspective Magazine &middot; President, AOEE</span>
           </li>
           <li class="bg-item">
             <span class="bg-org">Abbott Laboratories</span>
-            <span class="bg-role">6 years &middot; Product Strategy and Implementation &middot; Middle East, Africa, Turkey</span>
+            <span class="bg-role">6 years &middot; Product Strategy and Implementation &middot; Middle East, Africa, Turkey &middot; Dubai-based</span>
           </li>
           <li class="bg-item">
             <span class="bg-org">L.E.K. Consulting</span>
-            <span class="bg-role">Summer Associate</span>
+            <span class="bg-role">Summer Associate &middot; Sell-side due diligence</span>
           </li>
           <li class="bg-item">
             <span class="bg-org">HiLabs</span>
-            <span class="bg-role">Senior PM, Growth</span>
+            <span class="bg-role">Senior PM, Growth and Customer Success</span>
+          </li>
+          <li class="bg-item">
+            <span class="bg-org">ISRO</span>
+            <span class="bg-role">Research Trainee &middot; Stress analysis in thin films for biosensor applications</span>
+          </li>
+          <li class="bg-item">
+            <span class="bg-org">Inaara</span>
+            <span class="bg-role">Volunteer &middot; COVID relief coordination &middot; 900+ patients connected to critical resources</span>
           </li>
         </ul>
       </div>
