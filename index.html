@@ -32,7 +32,7 @@
       background: var(--bg);
       color: var(--text);
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 17px;
+      font-size: 18px;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
     }
@@ -90,7 +90,7 @@
 
     /* Section structure */
     section {
-      padding: 5rem 0;
+      padding: 6rem 0;
     }
 
     section + section {
@@ -125,44 +125,37 @@
     }
 
     .hero-one-liner {
-      font-size: 1.2rem;
-      line-height: 1.65;
-      color: var(--text);
+      font-size: 2rem;
+      line-height: 1.3;
+      color: var(--navy);
       max-width: 600px;
-      margin-bottom: 1.25rem;
-      font-weight: 400;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+      font-family: 'Lora', Georgia, serif;
     }
 
     .hero-subtext {
-      font-size: 0.95rem;
+      font-size: 1.1rem;
       color: var(--text-muted);
       max-width: 580px;
       line-height: 1.8;
     }
 
     /* What Drives Me */
-    .drives-list {
-      list-style: none;
-      padding: 0;
+    .drives-block {
+      border-left: 3px solid var(--accent);
+      padding-left: 1.5rem;
       max-width: 680px;
     }
 
-    .drives-item {
-      padding: 1.75rem 0;
-      border-top: 1px solid var(--border);
-      font-size: 1rem;
-      line-height: 1.8;
-      color: var(--text-muted);
+    .drives-block p {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--text);
     }
 
-    .drives-item:last-child {
-      border-bottom: 1px solid var(--border);
-    }
-
-    .drives-item strong {
-      color: var(--navy);
-      font-weight: 500;
-      font-style: normal;
+    .drives-block p + p {
+      margin-top: 1.75rem;
     }
 
     /* Projects */
@@ -217,9 +210,9 @@
     }
 
     .project-insight {
-      font-size: 0.9rem;
+      font-size: 1rem;
       color: var(--navy);
-      border-left: 2px solid var(--navy);
+      border-left: 3px solid var(--accent);
       padding-left: 1rem;
       margin-bottom: 1.5rem;
       font-style: italic;
@@ -274,7 +267,7 @@
       display: grid;
       grid-template-columns: 200px 1fr;
       gap: 2rem;
-      padding: 1.25rem 0;
+      padding: 1.5rem 0;
       border-bottom: 1px solid var(--border);
       font-size: 0.9rem;
     }
@@ -289,9 +282,23 @@
       line-height: 1.5;
     }
 
+    .bg-detail {
+      display: flex;
+      flex-direction: column;
+    }
+
     .bg-role {
       color: var(--text-muted);
       line-height: 1.65;
+    }
+
+    .bg-insight {
+      font-family: 'Lora', Georgia, serif;
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+      line-height: 1.6;
     }
 
     /* Footer */
@@ -347,7 +354,11 @@
       }
 
       .hero-one-liner {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
+      }
+
+      .hero-subtext {
+        font-size: 1rem;
       }
 
       .bg-item {
@@ -387,7 +398,7 @@
       <div class="container">
         <h1>Aastha Bhardwaj</h1>
         <p class="hero-one-liner">Engineer. Builder. Someone who gives a damn.</p>
-        <p class="hero-subtext">I deploy complex technology into environments that resist it. A decade across 30+ countries taught me the instrument rarely fails. The human system around it does. Three applications shipped. A diagnostic lab in the Himalayas in the plans. An animal shelter after that.</p>
+        <p class="hero-subtext">I have deployed technology across 30 countries, stabilized a Fortune 30 account headed for termination, and shipped three AI applications in the last year. Most AI fails at the human layer. I specialize in that layer.</p>
       </div>
     </section>
 
@@ -395,11 +406,11 @@
     <section id="work">
       <div class="container">
         <p class="section-label">What Drives Me</p>
-        <ul class="drives-list">
-          <li class="drives-item"><strong>What lights me up:</strong> conversations, finding hidden patterns, language and meaning, understanding how people make decisions under pressure.</li>
-          <li class="drives-item"><strong>Where I create value:</strong> making complex systems trustworthy for the humans inside them, earning buy-in in skeptical environments, building things that actually get used.</li>
-          <li class="drives-item"><strong>What I want to keep building:</strong> accessible healthcare for people geography forgot, AI that works for the people who need it most, and eventually, an animal shelter.</li>
-        </ul>
+        <div class="drives-block">
+          <p>I can walk into a Fortune 30 boardroom and walk out of a COVID field hospital on the same day and earn trust in both rooms. Same approach, same instincts, different vocabulary.</p>
+          <p>Most AI deployment fails at the human layer. Not the model, not the infrastructure, the person who has to stake their reputation on trusting the output. I have spent a decade in that room. I know what it takes to be the reason someone says yes.</p>
+          <p>I once convinced a client to loan diagnostic assets to their direct competition because I had earned enough trust that my judgment about what was right mattered more than the contract. That is the kind of relationship I build. It is also the only kind worth building.</p>
+        </div>
       </div>
     </section>
 
@@ -467,7 +478,8 @@
         <p class="section-label">How I Think</p>
         <p>I grew up in Himachal Pradesh, where two million people in the foothills of the Himalayas lack access to basic diagnostic testing. My mother is a biochemist. The idea of building the first accredited diagnostic lab in that region has been in my plans since before my MBA. That is not a professional ambition. It is a moral position: that access to healthcare information should not be determined by geography or wealth.</p>
         <p>At Abbott I spent six years learning that the instrument always works. What fails is the human system around it. The nurse who does not trust the result. The lab director who was not consulted. The administrator who cannot see the ROI. I have spent my career in that gap. At HiLabs I stabilized a Fortune 30 client account that was in active escalation. The AI was fine. The relationship had broken. Same problem, different stack.</p>
-        <p>During the COVID crisis in India, a friend's father was dying and there were no hospital beds available. I was volunteering with Inaara, matching patients with plasma donors. We expanded to track beds, oxygen, and resources in real time. The platform connected over 900 patients with critical resources. My friend's father still passed away. I kept going. That instinct, building a parallel system when the existing one fails, shows up in everything I do. I am also a writer, a former college editor, and someone who finds genuine joy in the hidden architecture of language. At BITS I built an anonymous submissions section in the student magazine so students who were afraid to speak under their names could still be heard. Creating space for trust to form is not a professional skill. It is just how I operate.</p>
+        <p>I am also a writer, a former college editor, and someone who finds genuine joy in the hidden architecture of language. At BITS I built an anonymous submissions section in the student magazine so students who were afraid to speak under their names could still be heard. Creating space for trust to form is not a professional skill. It is just how I operate. One day I will build an animal shelter for the same reason.</p>
+        <p>The through-line across everything I have done is the same problem at different layers of the stack. Get a skeptical human to trust a system enough to act on it. I have done it with nurses, lab directors, Fortune 30 compliance teams, and my dad. The stakes change. The approach does not.</p>
       </div>
     </section>
 
@@ -478,31 +490,45 @@
         <ul class="bg-list">
           <li class="bg-item">
             <span class="bg-org">Harvard Business School</span>
-            <span class="bg-role">MBA, Class of 2025 &middot; Distinction, top 10%</span>
+            <div class="bg-detail">
+              <span class="bg-role">MBA, Class of 2025 &middot; Distinction, top 10%</span>
+              <span class="bg-insight">Where I learned to operate at the speed of a case and the ambiguity of a real decision.</span>
+            </div>
           </li>
           <li class="bg-item">
             <span class="bg-org">BITS Pilani</span>
-            <span class="bg-role">B.E. Electronics and Communications &middot; Distinction, top 5% &middot; Senior Editor and builder of the anonymous submissions section at Perspective Magazine &middot; President, AOEE</span>
+            <div class="bg-detail">
+              <span class="bg-role">B.E. Electronics and Communications &middot; Distinction, top 5% &middot; Senior Editor, Perspective Magazine &middot; President, AOEE</span>
+              <span class="bg-insight">Built the anonymous submissions section in the student magazine. Some voices need infrastructure before they can speak.</span>
+            </div>
           </li>
           <li class="bg-item">
             <span class="bg-org">Abbott Laboratories</span>
-            <span class="bg-role">6 years &middot; Product Strategy and Implementation &middot; Middle East, Africa, Turkey &middot; Dubai-based</span>
+            <div class="bg-detail">
+              <span class="bg-role">6 years &middot; Product Strategy and Implementation &middot; Middle East, Africa, Turkey</span>
+              <span class="bg-insight">Six years learning that the instrument always works. The human system around it does not.</span>
+            </div>
           </li>
           <li class="bg-item">
             <span class="bg-org">L.E.K. Consulting</span>
-            <span class="bg-role">Summer Associate &middot; Sell-side due diligence</span>
+            <div class="bg-detail">
+              <span class="bg-role">Summer Associate &middot; Sell-side due diligence</span>
+              <span class="bg-insight">$250M transaction. Identified 30% sales growth opportunity. Learned to think like the person writing the check.</span>
+            </div>
           </li>
           <li class="bg-item">
             <span class="bg-org">HiLabs</span>
-            <span class="bg-role">Senior PM, Growth and Customer Success</span>
+            <div class="bg-detail">
+              <span class="bg-role">Senior PM, Growth and Customer Success</span>
+              <span class="bg-insight">Stepped into a Fortune 30 escalation nobody else could close. The AI was fine. The relationship had broken.</span>
+            </div>
           </li>
           <li class="bg-item">
             <span class="bg-org">ISRO</span>
-            <span class="bg-role">Research Trainee &middot; Stress analysis in thin films for biosensor applications</span>
-          </li>
-          <li class="bg-item">
-            <span class="bg-org">Inaara</span>
-            <span class="bg-role">Volunteer &middot; COVID relief coordination &middot; 900+ patients connected to critical resources</span>
+            <div class="bg-detail">
+              <span class="bg-role">Research Trainee &middot; Biosensor applications</span>
+              <span class="bg-insight">Where it started. Stress analysis in thin films. Making diagnostic technology smaller, cheaper, more accessible.</span>
+            </div>
           </li>
         </ul>
       </div>
